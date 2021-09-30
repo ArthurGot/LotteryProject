@@ -1,1 +1,34 @@
+%% Input
+WinNum = input("Please enter the winning numbers, in the form [1,2,3,4,5]: ");
+WinPow = input("Please enter the powerball number: ");
+Multi = input ("Please enter the multiplier:");
+More = input("Please enter the number 1 if you would like to enter a ticket, or 0 if you dont have any tickets:");
+while ((More) == 1)
+    YourTicket = input("Please enter your ticket numbers, in the form [1,2,3,4,5]: ");
+    YourPow = input("Please enter your powerball number: ");
+    More = input("Do you have another ticket? Enter 1 for yes or 0 for no: ");
+end
 
+
+%% Output
+if((WinNum == YourNum) && (WinPow == YourPow))
+    disp("You win the grand prize!")
+elseif(WinNum == YourNum)
+    disp("You win $%d\n !", 'Winnings')
+elseif((4*WinNum == YourNum) && (WinPow == YourPow))
+     disp("You win $%d\n !", 'Winnings')
+elseif(4*WinNum == YourNum)
+     disp("You win $%d\n !", 'Winnings')
+elseif((3*WinNum == YourNum) && (WinPow == YourPow))
+     disp("You win $%d\n !", 'Winnings')
+elseif(3*WinNum == YourNum)
+     disp("You win $%d\n !", 'Winnings')
+elseif((2*WinNum == YourNum) && (WinPow == YourPow))
+     disp("You win $%d\n !", 'Winnings')
+elseif((1*WinNum == YourNum) && (WinPow == YourPow))
+     disp("You win $%d\n !", 'Winnings')
+elseif((WinPow == YourPow))
+     disp("You win $%d\n !", 'Winnings')
+else
+    disp("Sorry. You didn't win.")
+end
